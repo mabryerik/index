@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="media projects of erik mabry" />
+    <meta name="title" content="projects.erikmabry.me" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="referrer" content="no-referrer" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <a href="#skip" class="visually-hidden">skip to main content</a>
+      <main id="skip" class="page">
+        <nav>
+          <ul>
+            <li><a href="about.erikmabry.me" id="about">about</a></li>
+            <li><a href="blog.erikmabry.me" id="blog">blog</a></li>
+            <li><a href="projects.erikmabry.me" id="projects">projects</a></li>
+          </ul>
+        </nav>
+
+        <section class="listening">
+          <iframe
+            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+            frameborder="0"
+            height="450"
+            style="
+              width: 100%;
+              max-width: 660px;
+              overflow: hidden;
+              border-radius: 10px;
+            "
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/us/playlist/102023-listening/pl.u-vxy6JE5t13838Y"
+          ></iframe>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; 2023 erik mabry</p>
+      </footer>
+    </div>
+  </body>
+</html>

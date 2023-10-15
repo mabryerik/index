@@ -1,0 +1,200 @@
+@media screen and (max-width: 560px) {
+}
+
+/* Defaults */
+
+@font-face {
+  font-family: "Charter";
+  src: url("media/fonts/Charter.ttc");
+}
+
+@font-face {
+  font-family: "Menlo";
+  src: url("/media/fonts/Menlo.ttc");
+}
+
+:root {
+  --font-family: "Menlo", serif;
+  --font-family-monospace: monospace;
+  --font-family-header: "Charter", serif;
+  --font-size: 14px;
+}
+/* Theme colors */
+:root {
+  --color-gray-20: #e0e0e0;
+  --color-gray-50: #c0c0c0;
+  --color-gray-90: #222;
+  --background-color: #141511;
+  --text-color: #eee;
+  --text-color-link: #ee5;
+  --text-color-link-active: #fff;
+  --text-color-link-visited: #fff;
+  --syntax-tab-size: 2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  line-height: 1.35;
+  font-size: var(--font-size);
+  min-height: 100vh;
+  text-transform: lowercase;
+}
+
+body {
+  background-image: url("media/images/web-bg.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--background-color);
+  padding: 10px;
+  background-blend-mode: overlay;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  font-family: var(--font-family-header);
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+p {
+  margin: 1em auto;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+a[href] {
+  color: var(--text-color-link);
+}
+
+a[href]:visited {
+  color: var(--text-color-link-visited);
+}
+
+a[href]:hover,
+a[href]:active {
+  color: #eee;
+}
+
+a[href^="#"]::after {
+  content: " # ";
+  font-size: 0.75rem;
+}
+
+a[href="#top"]::after {
+  content: "";
+}
+
+a:any-link {
+  text-decoration: none;
+}
+
+a[href^="http://"]::after,
+a[href^="https://"]::after
+{
+  content: " ↪︎ ";
+  font-size: 0.75rem;
+}
+
+img {
+  width: 100%;
+}
+
+/* containers */
+
+.wrapper {
+  width: 100%;
+  margin: 25vh auto;
+}
+
+main {
+  padding: 0 1rem;
+  width: min(75%, 95ch);
+  background: hsla(0, 0%, 10%, 0.75);
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header */
+
+header {
+}
+
+.site-title {
+}
+
+.site-title a:any-link {
+  text-decoration: none;
+}
+
+/* Nav */
+
+nav,
+.listening {
+  flex-grow: 1;
+  width: 50%;
+}
+
+nav {
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: min(100%, 75ch);
+  margin: 0 auto;
+}
+
+#about:hover::after,
+#blog:hover::after,
+#projects:hover::after {
+  content: ".erikmabry.me";
+  color: var(--text-color-link);
+}
+
+/* page styles */
+
+main h2 {
+  margin-top: 0;
+}
+
+.listening {
+  margin: 25px 0;
+}
+
+.listening h2 {
+  margin-bottom: 10px;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+}
