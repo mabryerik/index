@@ -1,40 +1,3 @@
-@media screen and (max-width: 700px) {
-	.wrapper {
-		margin-top: 1% !important;
-	}
-
-	main {
-		flex-flow: column !important;
-		padding: 0 !important;
-		width: 90% !important;
-	}
-
-	nav {
-		font-size: 1.5rem !important;
-		padding-top: 5% !important;
-		padding-left: 0 !important;
-	}
-
-	nav ul {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	nav,
-	.listening {
-		width: 90% !important;
-	}
-
-	#about:hover::after,
-	#blog:hover::after,
-	#projects:hover::after {
-		content: "" !important;
-		color: var(--text-color-link);
-	}
-}
-
 /* Defaults */
 
 @font-face {
@@ -138,7 +101,7 @@ img {
 
 main {
 	padding: 0 1rem;
-	width: min(75%, 95ch);
+	width: min(90ch, 100%);
 	margin: 0 auto;
 	display: flex;
 	flex-flow: row wrap;
@@ -148,10 +111,25 @@ main {
 
 /* Nav */
 
-nav,
+nav {
+	width: 33%;
+	flex-grow: 1;
+	text-align: center;
+}
+
+nav::before {
+	content: "[";
+	color: yellow;
+}
+
+nav::after {
+	content: "]";
+	color: yellow;
+}
+
 .listening {
 	flex-grow: 1;
-	width: 50%;
+	width: 66%;
 }
 
 nav {
@@ -181,4 +159,41 @@ nav ul {
 
 footer {
 	text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+	.wrapper {
+		margin-top: 1% !important;
+	}
+
+	main {
+		flex-flow: column !important;
+		padding: 0 !important;
+		width: 90% !important;
+	}
+
+	nav {
+		font-size: 1.5rem !important;
+		padding-top: 5% !important;
+		padding-left: 0 !important;
+	}
+
+	nav ul {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	nav,
+	.listening {
+		width: 90% !important;
+	}
+
+	#about:hover::after,
+	#blog:hover::after,
+	#projects:hover::after {
+		content: "" !important;
+		color: var(--text-color-link);
+	}
 }
